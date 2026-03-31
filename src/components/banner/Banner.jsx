@@ -4,11 +4,11 @@ import bannerimg from "../../assets/banner.png"
 
 const Banner = () => {
      return (
-       <div className="h-[400px] flex items-center justify-between max-w-5xl mx-auto px-4 my-20">
+       <div className="flex items-center justify-between max-w-6xl mx-auto px-4 my-20">
          <div>
            <div className="badge badge-soft badge-primary rounded-2xl">
              <img src={doted} alt="" />
-             <span className="bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
+             <span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
                New: AI-Powered Tools Available
              </span>
            </div>
@@ -17,7 +17,7 @@ const Banner = () => {
              Supercharge Your <br /> Digital Workflow
            </h1>
            <p className="text-lg mt-4 text-[#627382]">
-             Access premium AI tools, design assets, templates, and productivity{" "}
+             Access premium AI tools, design assets, templates, and productivity
              <br />
              software—all in one place. Start creating faster today. <br />
              Explore Products
@@ -28,8 +28,8 @@ const Banner = () => {
            </div>
          </div>
 
-               <div>
-               <img src={bannerimg} alt="Banner" className="w-[500px] h-[400px]" />
+          <div>
+               <img src={bannerimg} alt="Banner"/>
          </div>
        </div>
      );
