@@ -7,7 +7,7 @@ import Steps from "./components/steps/Steps";
 import Premium from "./components/premiumTools/Premium";
 import Simple from './components/simple/simple';
 import Workflow from './components/workflow/Workflow';
-
+import Footer from './components/footer/Footer';
 
 
 
@@ -33,6 +33,7 @@ function App() {
       <Steps />
       <Simple />
       <Workflow />
+      <Footer />
     </>
   );
 }
