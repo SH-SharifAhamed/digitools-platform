@@ -5,7 +5,7 @@ import rocket from "../../assets/rocket.png";
 
 const Steps = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 my-20">
+    <div className="max-w-6xl mx-auto px-4 my-6">
       <div>
         <h2 className="text-5xl font-bold text-center">
           Get Started In 3 Steps
@@ -18,7 +18,7 @@ const Steps = () => {
       <div className="flex flex-col md:flex-row gap-4 text-center items-center justify-between">
         {/* card no 1 */}
         <div
-          className="relative items-center gap-4 mt-10 border-1 border-[#4f39f647] rounded-lg p-4
+          className="relative items-center gap-4 mt-10 border border-[#4f39f647] rounded-lg p-4
           hover:shadow-xl hover:scale-[1.02] hover:border-[#1600b9] 
           transition-all duration-300 cursor-pointer"
         >
@@ -42,7 +42,7 @@ const Steps = () => {
 
         {/* card no 2 */}
         <div
-          className="relative items-center gap-4 mt-10 border-1 border-[#4f39f647] rounded-lg p-4
+          className="relative items-center gap-4 mt-10 border border-[#4f39f647] rounded-lg p-4
                hover:shadow-xl hover:scale-[1.02] hover:border-[#4F39F6] 
                transition-all duration-300 cursor-pointer"
         >
@@ -66,7 +66,7 @@ const Steps = () => {
 
         {/* card no 3 */}
         <div
-          className="relative items-center gap-4 mt-10 border-1 border-[#4f39f647] rounded-lg p-4
+          className="relative items-center gap-4 mt-10 border border-[#4f39f647] rounded-lg p-4
                hover:shadow-xl hover:scale-[1.02] hover:border-[#4F39F6] 
                transition-all duration-300 cursor-pointer"
         >
