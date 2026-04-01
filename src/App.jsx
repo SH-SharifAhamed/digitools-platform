@@ -6,7 +6,7 @@ import Stats from "./components/stats/Stats";
 import Steps from "./components/steps/Steps";
 import Premium from "./components/premiumTools/Premium";
 import Simple from './components/simple/simple';
-
+import Workflow from './components/workflow/Workflow';
 
 
 
@@ -32,6 +32,7 @@ function App() {
       <Premium />
       <Steps />
       <Simple />
+      <Workflow />
     </>
   );
 }

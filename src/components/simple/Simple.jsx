@@ -11,7 +11,7 @@ const Simple = () => {
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-        {/* starter of pricing card */}
+        {/* starter of pricing card No-1 */}
 
         <div className="card w-96 bg-base-100 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
           <div className="card-body">
@@ -64,7 +64,7 @@ const Simple = () => {
           </div>
         </div>
 
-        {/* Pro of pricing card */}
+        {/* Pro of pricing card No-2 */}
         <div className="relative group">
           <div className="absolute inset-0 bg-purple-700 blur-2xl opacity-20 group-hover:opacity-40 transition duration-300"></div>
           <div
@@ -123,7 +123,7 @@ const Simple = () => {
           </div>
         </div>
 
-        {/* Enterprise of pricing card */}
+        {/* Enterprise of pricing card No-3 */}
         <div className="group relative w-96">
           <div className="absolute inset-0 bg-blue-500/20 blur-2xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
 

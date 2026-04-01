@@ -1,6 +1,9 @@
 import React from 'react';
 import doted from "../../assets/Group 5.png"
 import bannerimg from "../../assets/banner.png"
+import watch from "../../assets/play.png"
+
+
 
 const Banner = () => {
      return (
@@ -23,13 +26,18 @@ const Banner = () => {
              Explore Products
            </p>
            <div className="mt-4 flex gap-4">
-             <button className="btn btn-primary rounded-[20px]">Primary</button>
-             <button className="btn btn-outline btn-primary rounded-[20px]">Primary</button>
+             <button className="btn btn-primary rounded-[20px] bg-linear-to-r from-[#4F39F6] to-[#9514FA]">
+               Explore Products
+             </button>
+             <button className="btn btn-outline btn-primary rounded-[20px] bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent flex gap-2 items-center">
+               <img src={watch} alt="" />
+               Watch Demo
+             </button>
            </div>
          </div>
 
-          <div>
-               <img src={bannerimg} alt="Banner"/>
+         <div>
+           <img src={bannerimg} alt="Banner" />
          </div>
        </div>
      );
