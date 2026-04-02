@@ -1,5 +1,5 @@
-// import { useState } from 'react'
-import { Suspense } from "react";
+
+import { useState, Suspense } from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Banner from "./components/banner/Banner";
@@ -23,16 +23,22 @@ const fetchPremium = async () => {
 function App() {
   const premiumPromise = fetchPremium();
 
+const [cartCount, setCartCount] = useState(0);
+const [selectedItems, setSelectedItems] = useState([]);  
+  
   return (
     <>
-      <Navbar />
+      <Navbar cart={cartCount} />
       <Banner />
       <Stats />
 
       <Suspense
         fallback={<span className="loading loading-infinity loading-xl"></span>}
       >
-        <Premium premiumPromise={premiumPromise} />
+        <Premium premiumPromise={premiumPromise}
+          setCartCount={setCartCount}
+          setSelectedItems={setSelectedItems}
+          selectedItems={selectedItems} />
       </Suspense>
       <Steps />
       <Simple />

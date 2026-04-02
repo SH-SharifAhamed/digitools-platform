@@ -1,6 +1,11 @@
 import React from "react";
 
-const AvailablePremium = ({ premium }) => {
+const AvailablePremium = ({
+  premium,
+  setCartCount,
+  setSelectedItems,
+  selectedItems,
+}) => {
   const getBadgeColor = (badge) => {
     switch (badge) {
       case "Best Seller":
@@ -14,6 +19,15 @@ const AvailablePremium = ({ premium }) => {
     }
   };
 
+  const handleAddToCart = (item) => {
+    const exists = selectedItems.some((i) => i.id === item.id);
+
+    if (!exists) {
+      setSelectedItems((prev) => [...prev, item]);
+      setCartCount((prev) => prev + 1);
+    }
+  };
+
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -24,15 +38,16 @@ const AvailablePremium = ({ premium }) => {
 
               <div
                 className="card relative z-10 bg-base-100 shadow-md rounded-2xl 
-               transform transition-all duration-500 ease-out
-               hover:-translate-y-4 hover:scale-105 hover:shadow-2xl"
+                                        transform transition-all duration-500 ease-out
+                                        hover:-translate-y-4 hover:scale-105 hover:shadow-2xl"
               >
                 <span
                   className={`absolute top-2 right-2 p-2 font-bold rounded-3xl badge badge-xs transition-transform duration-300 group-hover:scale-100 ${getBadgeColor(item.badge)}`}
                 >
                   {item.badge}
                 </span>
-                <div className="card-body">
+                         <div className="card-body">
+                              <img className=" p-10 w-30" src={item.icon} alt={item.title} />
                   <h2 className="text-3xl font-bold group-hover:text-blue-600 transition duration-300">
                     {item.title}
                   </h2>
@@ -74,13 +89,17 @@ const AvailablePremium = ({ premium }) => {
                   <div className="mt-6">
                     <button
                       className="btn btn-block rounded-[20px] text-white border-none
-                bg-linear-to-r from-blue-500 to-purple-500
-                transition-all duration-300
-                hover:scale-105 hover:shadow-xl
-            hover:from-blue-600 hover:to-purple-600
-                active:scale-95"
+                                                       bg-linear-to-r from-blue-500 to-purple-500
+                                                       transition-all duration-300
+                                                       hover:scale-105 hover:shadow-xl
+                                                        hover:from-blue-600 hover:to-purple-600
+                                                       active:scale-95"
+                      onClick={() => handleAddToCart(item)}
+                      disabled={selectedItems.some((i) => i.id === item.id)}
                     >
-                      Buy Now
+                      {selectedItems.some((i) => i.id === item.id)
+                        ? "Added to Cart"
+                        : "Buy Now"}
                     </button>
                   </div>
                 </div>
@@ -88,8 +107,6 @@ const AvailablePremium = ({ premium }) => {
             </div>
           );
         })}
-
-        {/* card container */}
       </div>
     </div>
   );

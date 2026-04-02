@@ -11,7 +11,7 @@
       "50+ writing templates",
       "Grammar checker"
     ],
-    "icon": "ai"
+    "icon": "./img/writing_2327400 1.png"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "billing": "One-Time",
     "badge": "Popular",
     "features": ["2000+ templates", "Monthly updates", "Commercial license"],
-    "icon": "design"
+    "icon": "./img/design-tool.png"
   },
   {
     "id": 3,
@@ -31,7 +31,7 @@
     "billing": "Mo",
     "badge": "New",
     "features": ["10M+ assets", "Commercial use", "No attribution"],
-    "icon": "assets"
+    "icon": "./img/camera_8775444 1.png"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "billing": "Mo",
     "badge": "Popular",
     "features": ["50+ automations", "API access", "Custom workflows"],
-    "icon": "automation"
+    "icon": "./img/operation.png"
   },
   {
     "id": 5,
@@ -51,7 +51,7 @@
     "billing": "One-Time",
     "badge": "New",
     "features": ["100+ templates", "ATS optimization", "Export to PDF"],
-    "icon": "resume"
+    "icon": "./img/portfolio.png"
   },
   {
     "id": 6,
@@ -61,6 +61,6 @@
     "billing": "Mo",
     "badge": "Best Seller",
     "features": ["5000+ assets", "Scheduler included", "Analytics dashboard"],
-    "icon": "social"
+    "icon": "./img/social-media.png"
   }
 ]

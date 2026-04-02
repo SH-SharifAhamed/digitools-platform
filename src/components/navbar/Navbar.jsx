@@ -3,7 +3,7 @@ import addCard from "../../assets/products/shopping-cart.png";
 
 
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
      return (
        <div className="navbar bg-base-100 shadow-sm max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
          <div className="navbar-start">
@@ -25,17 +25,16 @@ const Navbar = () => {
          </div>
 
          <div className="flex items-center gap-4 navbar-end">
-           <button className="btn btn-ghost btn-circle">
+           <button className="relative btn btn-ghost btn-circle">
              <img src={addCard} alt="Add Card" className="h-5 w-5" />
+             <span className="absolute top-0 right-0 text-xs font-bold bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center">
+               {cart}
+             </span>
            </button>
-           <button className="btn btn-ghost ">
-             Login
-           </button>
-           <button
-             className="btn btn-ghost bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white px-4 py-2 rounded-[20px]">
+           <button className="btn btn-ghost ">Login</button>
+           <button className="btn btn-ghost bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white px-4 py-2 rounded-[20px]">
              Get Started
            </button>
-           
          </div>
        </div>
      );
