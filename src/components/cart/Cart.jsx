@@ -1,17 +1,31 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const Cart = ({ selectedItems, setSelectedItems, setCartCount }) => {
   const handleRemove = (id) => {
     setSelectedItems((prev) => {
       const updated = prev.filter((item) => item.id !== id);
-      setCartCount(updated.length);
-      return updated;
+         setCartCount(updated.length);
+         
+         if (updated.length === 0) {
+           toast.info("Cart is empty");
+         } else {
+           toast.error("Item removed");
+         }
+         return updated;
+         
     });
-     };
-     
-     const totalPrice = selectedItems.reduce((total, item) => {
-       return total + item.price;
-     }, 0);
+
+    toast.error("Item removed");
+  };
+
+  const handleCheckout = () => {
+    toast.success("Proceeding to checkout");
+  };
+
+  const totalPrice = selectedItems.reduce((total, item) => {
+    return total + item.price;
+  }, 0);
 
   return (
     <div className="max-w-5xl mx-auto">
@@ -46,6 +60,8 @@ const Cart = ({ selectedItems, setSelectedItems, setCartCount }) => {
                 hover:scale-105 hover:shadow-xl
             hover:from-blue-600 hover:to-purple-600
                 active:scale-95"
+          onClick={handleCheckout}
+          // disabled={selectedItems.length === 0}
         >
           Proceed to Checkout
         </button>

@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const AvailablePremium = ({
   premium,
@@ -23,8 +24,12 @@ const AvailablePremium = ({
     const exists = selectedItems.some((i) => i.id === item.id);
 
     if (!exists) {
-      setSelectedItems((prev) => [...prev, item]);
+      setSelectedItems([...selectedItems, item]);
       setCartCount((prev) => prev + 1);
+
+      toast.success("Item added to cart");
+    } else {
+      toast.warning("Already added");
     }
   };
 
@@ -46,8 +51,12 @@ const AvailablePremium = ({
                 >
                   {item.badge}
                 </span>
-                         <div className="card-body">
-                              <img className=" p-10 w-30" src={item.icon} alt={item.title} />
+                <div className="card-body">
+                  <img
+                    className=" p-10 w-30"
+                    src={item.icon}
+                    alt={item.title}
+                  />
                   <h2 className="text-3xl font-bold group-hover:text-blue-600 transition duration-300">
                     {item.title}
                   </h2>

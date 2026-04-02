@@ -9,7 +9,8 @@ import Premium from "./components/premiumTools/Premium";
 import Simple from "./components/simple/simple";
 import Workflow from "./components/workflow/Workflow";
 import Footer from "./components/footer/Footer";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
@@ -35,15 +36,18 @@ const [selectedItems, setSelectedItems] = useState([]);
       <Suspense
         fallback={<span className="loading loading-infinity loading-xl"></span>}
       >
-        <Premium premiumPromise={premiumPromise}
+        <Premium
+          premiumPromise={premiumPromise}
           setCartCount={setCartCount}
           setSelectedItems={setSelectedItems}
-          selectedItems={selectedItems} />
+          selectedItems={selectedItems}
+        />
       </Suspense>
       <Steps />
       <Simple />
       <Workflow />
       <Footer />
+      <ToastContainer position="top-right" autoClose={2000} />
     </>
   );
 }
